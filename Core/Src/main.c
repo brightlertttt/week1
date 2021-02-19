@@ -94,7 +94,7 @@ int main(void)
   GPIO_PinState Switchswap[2];
   uint16_t LED1_HalfPeriod = 1000;
   uint16_t LED3_15 = 1500;
-  uint16_t LED3_05 = 166;
+  uint16_t LED3_05 = 500;
   uint32_t TimeStamp = 0;
   uint32_t TimeStamp1 = 0;
   uint32_t ButtonTimeStamp = 0;
@@ -146,14 +146,14 @@ int main(void)
     }
     if(Switchswap[1]== GPIO_PIN_SET && Switchswap[0]== GPIO_PIN_RESET)
     {
-    	if(LED3_05 == 166 && LED3_15 == 1500)
+    	if(LED3_05 == 500 && LED3_15 == 1500)
     	{
     		LED3_05 = 1500;
-    		LED3_15 = 166;
+    		LED3_15 = 500;
     	}
     	else
     	{
-    		LED3_05 = 166;
+    		LED3_05 = 500;
     		LED3_15 = 1500;
     	}
     }
